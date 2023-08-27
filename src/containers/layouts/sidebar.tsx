@@ -33,7 +33,7 @@ export const Sidebar = () => {
           </li>
           <li>
             <Link
-              href="/"
+              href="/artists"
               className="flex items-center gap-4 dark:text-white text-sm py-5"
             >
               <UsersIcon className="h-4 w-4 text-blue-500" />

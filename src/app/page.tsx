@@ -34,8 +34,12 @@ export default async function Home() {
             MUSIC
           </div>
           <div className="flex flex-wrap gap-4">
-            <Button>Open Music Library</Button>
-            <Button variant="filled">Sign Up</Button>
+            <Button classNames="px-3 py-2 text-white">
+              Open Music Library
+            </Button>
+            <Button variant="filled" classNames="px-3 py-2">
+              Sign Up
+            </Button>
           </div>
         </section>
       </HomeLayout>

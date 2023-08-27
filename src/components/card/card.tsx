@@ -1,5 +1,6 @@
 import { PlayCircleIcon } from "@heroicons/react/24/outline";
 import React from "react";
+import { Button } from "../button/button";
 
 export const Card = () => {
   return (
@@ -16,16 +17,17 @@ export const Card = () => {
         <p className="font-bold dark:text-black text-sm">Tempelhof</p>
         <p className="text-xs text-gray-400">Yann Tiersen</p>
       </div>
+
       <div className="flex flex-wrap items-center justify-between">
         <div>
           <p className="text-xs text-gray-400">1 day ago</p>
           <p className="font-bold text-sm capitalize">electronic</p>
         </div>
         <div>
-          <button className="border-2 px-3 border-gray-900 rounded-full text-xs py-1 font-bold flex items-center gap-2">
-            <PlayCircleIcon className=" w-4 h-4" />
+          <Button classNames="px-3 py-1 text-xs text-black border-gray-900">
+            <PlayCircleIcon className="w-4 h-4" />
             Play
-          </button>
+          </Button>
         </div>
       </div>
     </div>

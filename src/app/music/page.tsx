@@ -8,7 +8,7 @@ export default function MusicsPage() {
     <PageLayout>
       <div className="ml-36">
         <Featured />
-        <div className=" px-5 py-8">
+        <div className="px-5 py-8">
           <Music />
         </div>
       </div>

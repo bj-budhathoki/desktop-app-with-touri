@@ -1,17 +1,56 @@
+import { Button } from "@/components/button/button";
+import {
+  ArrowDownTrayIcon,
+  ArrowTrendingUpIcon,
+  PlayCircleIcon,
+} from "@heroicons/react/24/solid";
 import React from "react";
 
 export const Featured = () => {
   return (
     <div
-      className="h-80"
+      className="h-80 bg-cover bg-center "
       style={{
         backgroundImage: `url(
-              https://ncsmusic.s3.eu-west-1.amazonaws.com/slides/000/000/001/2000x0/1680853147_VqWMtQvc0j_Website-new.jpg
+              https://cdn.pixabay.com/photo/2013/07/12/18/17/equalizer-153212_1280.png
             )`,
-        backgroundPosition: "center",
       }}
     >
-      Featured
+      <div
+        className="flex items-center gap-8 flex-wrap h-full  px-5 "
+        style={{
+          background: `rgba(0,0,0,0.6)`,
+        }}
+      >
+        <div
+          className="bg-cover bg-center w-64 h-64 "
+          style={{
+            backgroundImage: `url(
+             https://cdn.pixabay.com/photo/2015/09/19/01/05/country-946706_1280.jpg
+            )`,
+          }}
+        ></div>
+        <div className="flex flex-col gap-3">
+          <div className="text-white font-bold flex gap-2 items-center border-b pb-2 border-gray-200">
+            <ArrowTrendingUpIcon className="w-6 h-6  text-green-600" />
+            Featured Release
+          </div>
+          <div className="">
+            <h3 className="text-white font-bold uppercase text-sm">sky BRI</h3>
+            <p className="text-white text-sm">Artist name</p>
+          </div>
+          <div className="flex gap-5">
+            <Button classNames="px-3 py-1 text-xs text-white ">
+              <PlayCircleIcon className="w-4 h-4 " />
+              Play
+            </Button>
+            <Button classNames="px-3 py-1 text-xs text-white ">
+              <ArrowDownTrayIcon className="w-4 h-4" />
+              Download
+            </Button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
