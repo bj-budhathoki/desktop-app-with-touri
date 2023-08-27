@@ -1,4 +1,6 @@
+"use client";
 import { Button } from "@/components/button/button";
+import { useMusicStore } from "@/store/storeConfig";
 import {
   ArrowDownTrayIcon,
   ArrowTrendingUpIcon,
@@ -7,6 +9,7 @@ import {
 import React from "react";
 
 export const Featured = () => {
+  const { music, setMusic } = useMusicStore((state) => state);
   return (
     <div
       className="h-80 bg-cover bg-center "
@@ -42,14 +45,28 @@ export const Featured = () => {
             <p className="text-white text-sm">BUNKKERO NOX</p>
           </div>
           <div className="flex gap-5">
-            <Button classNames="px-3 py-1 text-xs text-white ">
+            <Button
+              classNames="px-3 py-1 text-xs text-white"
+              onClick={() => {
+                setMusic({
+                  src: "https://cdns-preview-f.dzcdn.net/stream/c-f14663fc7c6e527407cdc8482365de7a-2.mp3",
+                  thumbnail:
+                    "https://e-cdns-images.dzcdn.net/images/cover/53b97bdffaf897ce0f8151fe3d62699d/1000x1000-000000-80-0-0.jpg",
+                  title: "MI MAYOR TEMOR",
+                  artist: "BUNKKERO NOX",
+                  isSelected: true,
+                });
+              }}
+            >
               <PlayCircleIcon className="w-4 h-4 " />
               Play
             </Button>
-            <Button classNames="px-3 py-1 text-xs text-white ">
-              <ArrowDownTrayIcon className="w-4 h-4" />
-              Download
-            </Button>
+            <a href={music?.src} download={true} target="_blank">
+              <Button classNames="px-3 py-1 border-gray-800 text-sm border text-white">
+                <ArrowDownTrayIcon className="w-5 h-5" />
+                Download
+              </Button>
+            </a>
           </div>
         </div>
       </div>

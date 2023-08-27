@@ -1,9 +1,11 @@
+"use client";
 import { PlayCircleIcon } from "@heroicons/react/24/outline";
 import React from "react";
 import { Button } from "../button/button";
+import { useMusicStore } from "@/store/storeConfig";
 
 export const Card = ({ music }: { music: any }) => {
-  console.log({ music });
+  const { setMusic } = useMusicStore((state) => state);
   return (
     <div>
       <div
@@ -27,7 +29,18 @@ export const Card = ({ music }: { music: any }) => {
           <p className="font-bold text-sm capitalize">{music?.type}</p>
         </div>
         <div>
-          <Button classNames="px-3 py-1 text-xs text-black border-gray-900">
+          <Button
+            classNames="px-3 py-1 text-xs text-black border-gray-900"
+            onClick={() => {
+              setMusic({
+                src: music?.preview,
+                thumbnail: music?.album?.cover_small,
+                title: music?.album?.title,
+                artist: music?.artist?.name,
+                isSelected: true,
+              });
+            }}
+          >
             <PlayCircleIcon className="w-4 h-4" />
             Play
           </Button>

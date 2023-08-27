@@ -3,7 +3,6 @@ import React from "react";
 import { Player } from "../player/player";
 
 export const Music = ({ results }: any) => {
-  console.log({ results: results?.data });
   return (
     <section>
       <div className="mb-8">
