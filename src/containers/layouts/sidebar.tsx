@@ -24,7 +24,7 @@ export const Sidebar = () => {
         <ul>
           <li>
             <Link
-              href="/"
+              href="/music"
               className="flex items-center gap-4 dark:text-white text-sm py-5"
             >
               <MusicalNoteIcon className="h-4 w-4 text-blue-500" />

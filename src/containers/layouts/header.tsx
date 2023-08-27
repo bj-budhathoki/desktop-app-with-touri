@@ -4,16 +4,10 @@ import React from "react";
 
 export const Header = () => {
   return (
-    <nav className="border-b border-gray-600 bg-white dark:bg-black">
+    <nav className="border-b border-gray-600 bg-white pl-40">
       <div className="px-5 py-3">
         <div className="flex justify-between items-center">
-          <div className="flex items-center gap-10">
-            <div className="mr-10">
-              <Logo />
-            </div>
-            <SearchInput />
-          </div>
-          <div className="dark:text-white">User</div>
+          <SearchInput />
         </div>
       </div>
     </nav>

@@ -5,7 +5,7 @@ export const Card = () => {
   return (
     <div>
       <div
-        className="h-72 w-full   bg-cover bg-center"
+        className="h-72 w-full bg-cover bg-center"
         style={{
           backgroundImage: `url(
             https://e-cdns-images.dzcdn.net/images/cover/a8224e3b2368d35ddc292d4e89fe34f5/500x500-000000-80-0-0.jpg
