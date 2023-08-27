@@ -3,10 +3,10 @@ export const getMusics = async () => {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "dc3f81214bmsh4c616431491b5fcp1e1b4ejsnc207d9a4f4d9",
+      "X-RapidAPI-Key": process.env.RAPID_API_KEY,
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
-  };
+  } as any;
 
   try {
     const response = await fetch(url, options);
