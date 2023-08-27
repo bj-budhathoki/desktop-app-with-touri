@@ -11,7 +11,7 @@ export const getMusics = async () => {
   try {
     const response = await fetch(url, options);
     const result = await response.text();
-    return result;
+    return JSON.parse(result);
   } catch (error) {
     return error;
   }

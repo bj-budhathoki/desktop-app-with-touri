@@ -12,7 +12,7 @@ export const Featured = () => {
       className="h-80 bg-cover bg-center "
       style={{
         backgroundImage: `url(
-              https://cdn.pixabay.com/photo/2013/07/12/18/17/equalizer-153212_1280.png
+             https://e-cdns-images.dzcdn.net/images/cover/53b97bdffaf897ce0f8151fe3d62699d/1000x1000-000000-80-0-0.jpg
             )`,
       }}
     >
@@ -26,7 +26,7 @@ export const Featured = () => {
           className="bg-cover bg-center w-64 h-64 "
           style={{
             backgroundImage: `url(
-             https://cdn.pixabay.com/photo/2015/09/19/01/05/country-946706_1280.jpg
+           https://e-cdns-images.dzcdn.net/images/cover/53b97bdffaf897ce0f8151fe3d62699d/1000x1000-000000-80-0-0.jpg
             )`,
           }}
         ></div>
@@ -36,8 +36,10 @@ export const Featured = () => {
             Featured Release
           </div>
           <div className="">
-            <h3 className="text-white font-bold uppercase text-sm">sky BRI</h3>
-            <p className="text-white text-sm">Artist name</p>
+            <h3 className="text-white font-bold uppercase text-sm">
+              Mi Mayor Temor
+            </h3>
+            <p className="text-white text-sm">BUNKKERO NOX</p>
           </div>
           <div className="flex gap-5">
             <Button classNames="px-3 py-1 text-xs text-white ">

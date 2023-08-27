@@ -6,8 +6,6 @@ import { getMusics } from "@/services/musics";
 import Image from "next/image";
 
 export default async function Home() {
-  // const results = await getMusics();
-  // console.log(results);
   return (
     <section>
       <HomeLayout>
